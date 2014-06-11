@@ -60,12 +60,12 @@ function syndi_get_deleted_list($args) {
 	global $wpdb, $qnibusNaverSyndication;
 
 	$where = '';
-	if($args->target_content_id) $where .= ' and post_id='. $args->target_content_id;
-	if($args->target_channel_id) $where .= ' and term_id='. $args->target_channel_id;
-	if($args->start_time) $where .= ' and delete_date >= '. $args->start_time;
-	if($args->end_time) $where .= ' and delete_date <= '. $args->end_time;
+	if($args->target_content_id) $where .= ' AND post_id='. $args->target_content_id;
+	if($args->target_channel_id) $where .= ' AND term_id='. $args->target_channel_id;
+	if($args->start_time) $where .= ' AND delete_date >= '. $args->start_time;
+	if($args->end_time) $where .= ' AND delete_date <= '. $args->end_time;
 
-	$sql = "SELECT post_id, term_id, title, delete_date, link_alternative FROM `".$qnibusNaverSyndication->table_name."` where 1=1" . $where;
+	$sql = "SELECT post_id, term_id, title, delete_date, link_alternative FROM `".$qnibusNaverSyndication->table_name."` WHERE 1=1" . $where;
 	$sql .= " order by delete_date desc ";	
 	$sql .= sprintf(" limit %s,%s", ($args->page-1)*$args->max_entry, $args->max_entry);
 	
@@ -227,7 +227,7 @@ function syndi_get_deleted_next_page($args) {
 	if($args->start_time) $where .= ' and delete_date >= '. $args->start_time;
 	if($args->end_time) $where .= ' and delete_date <= '. $args->end_time;
 
-	$wpdb->query( "SELECT post_id, term_id, title, delete_date, link_alternative FROM `" . $qnibusNaverSyndication->table_name . "` where 1=1" . $where );	
+	$wpdb->query( "SELECT post_id, term_id, title, delete_date, link_alternative FROM `" . $qnibusNaverSyndication->table_name . "` WHERE 1=1" . $where );	
 	$total_count = $wpdb->num_rows;
 	$total_page = ceil($total_count / $args->max_entry);
 

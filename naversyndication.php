@@ -38,7 +38,6 @@ if ( ! class_exists( 'QnibusNaverSyndication' ) ) {
          * @since version 1.0
          * @return NULL
 		 * @access public
-		 * @todo 퍼머링크 비활성화시 플러그인 활성화 불가 처리
          **************************************************************************/
 		static function activationSyndication() {
 			// PHP 버전 5.5이하 사용불가
@@ -54,7 +53,7 @@ if ( ! class_exists( 'QnibusNaverSyndication' ) ) {
 
 			global $wpdb;
 
-			$table_name = $wpdb->prefix . (is_multisite() ? get_current_blog_id() . '_' : '') . 'qnibus_naversyndication';
+			$table_name = $wpdb->prefix . 'qnibus_naversyndication';
 			$wpdb->query(
 				"CREATE TABLE IF NOT EXISTS `$table_name` (
 					`post_id` bigint(20) unsigned NOT NULL, 
@@ -70,7 +69,7 @@ if ( ! class_exists( 'QnibusNaverSyndication' ) ) {
 		
 		
 		/**************************************************************************
-         * 플러그인 비활성화
+         * 플러그인 삭제
          *
          * @since version 1.0
          * @return NULL
@@ -111,7 +110,7 @@ if ( ! class_exists( 'QnibusNaverSyndication' ) ) {
 			$this->plugin_dir = trailingslashit( dirname( __FILE__ ) );
 			$this->plugin_url = plugin_dir_url(__FILE__);
 			$this->plugin_file = basename( __FILE__ );
-			$this->table_name = is_multisite() ? $wpdb->prefix . get_current_blog_id() . '_' . $this->name : $wpdb->prefix . $this->name;
+			$this->table_name = $wpdb->prefix . $this->name;
 			
 			// static variable
 			$this->options = wp_parse_args( get_option( $this->name ), array(
