@@ -13,11 +13,6 @@
 			<td>
 				<input name="syndi_homepage_url" type="text" id="syndi_homepage_url" value="<?php echo $this->options['syndi_homepage_url']; ?>" class="regular-text">
 				<!-- <button type="button" class="cpm_more_info_hndl cpm_blink_me">신디케이션 문서출력 동작확인</button> -->
-				<div class="cpm_more_info" style="display: none;">
-                    <p>To insert the map in a responsive design (in a responsive design, the map's width should be adjusted with the page width):</p>
-                    <p>the value of map's width should be defined as a percentage of container's width, for example, type the value: <strong>100%</strong></p>
-                    <a href="javascript:void(0)" onclick="cpm_hide_more_info( this );">[ + less information]</a>
-                </div>
 				<p class="description">신대케이션 정보를 제공할 때 사용되는 사이트의 주소를 입력해주세요 이 주소는 대표 주소를 이용해주시고 가능한 바꾸지 않는 것이 좋습니다.</p>
 			</td>
 		</tr>

@@ -15,7 +15,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 본 플러그인은 standby 상태에서 <a href="https://help.naver.com/support/contents/contents.nhn?serviceNo=606&categoryNo=2017" target="_blank">네이버 고객센터</a>에 요청해 working 상태로 만드셔야 실 사용이 가능합니다. 
 
-* PHP 5.5이상에서 사용 불가
 * Permalink 활성화 사이트만 이용 가능
 * 컨텐츠 타입(web, blog) 선택 가능
 * 사이트 상태 체크
@@ -23,7 +22,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Installation ==
 
-플러그인은 설치하시면 됩니다.
+플러그인 검색에서 naver syndication으로 검색하셔서 설치하시면 됩니다.
 
 == Frequently Asked Questions ==
 
