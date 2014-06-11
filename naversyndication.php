@@ -40,12 +40,11 @@ if ( ! class_exists( 'QnibusNaverSyndication' ) ) {
 		 * @access public
          **************************************************************************/
 		static function activationSyndication() {
-			// PHP 버전 5.5이하 사용불가
-			if ( version_compare( PHP_VERSION, '5.5.0', '>' ) ) { 
+			if ( version_compare( PHP_VERSION, '5.0.1', '<' ) ) { 
                 deactivate_plugins( basename( __FILE__ ) ); // Deactivate ourself 
-            	wp_die( "PHP 5.5 이상에서 사용이 불가합니다." );
+            	wp_die( "PHP 5.0.1 이상에서만 사용이 가능합니다. (현재 PHP 버전: ".PHP_VERSION.")" );
         	}
-        	
+
         	if(!get_option( 'permalink_structure' )) {
         		deactivate_plugins( basename( __FILE__ ) ); // Deactivate ourself 
           		wp_die( "네이버 정책상 퍼머링크를 활성화하지 않으면 사용할 수 없습니다." );
