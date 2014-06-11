@@ -13,7 +13,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-본 플러그인은 <a href="http://cp.news.search.daum.net/partner/guide_enterance" target="_blank">DaumNews</a>에 가입하고 승인을 받으셔야 사용가능한 플러그인입니다.
+본 플러그인은 standby 상태에서 <a href="https://help.naver.com/support/contents/contents.nhn?serviceNo=606&categoryNo=2017" target="_blank">네이버 고객센터</a>에 요청해 working 상태로 만드셔야 실 사용이 가능합니다. 
 
 * PHP 5.5이상에서 사용 불가
 * Permalink 활성화 사이트만 이용 가능
